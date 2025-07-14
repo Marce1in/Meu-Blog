@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+{% assign date_lang = site.active_lang | split: "-" | first %}
+
+<small>{{ page.date | localize: "%-d %B %Y", date_lang}}</small>
+<h1>{{ page.title }}</h1>
+
+<p class="view">{{site.data[site.active_lang].strings.by}} {{ page.author | default: site.author }}</p>
+
+{{content}}
+
+{% unless page.tags == empty %}
+  <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
+{% endunless %}

@@ -1,0 +1,45 @@
+<!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+<title>{{ page.title }} | {{ sitelocal.title }}</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="{{ page.title }}" />
+<meta name="author" content="{{ site.author }}" />
+<meta property="og:locale" content="{{ site.active_lang }}" />
+<meta name="description" content="{{ sitelocal.description }}" />
+<meta property="og:description" content="{{ sitelocal.description }}" />
+<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+<meta property="og:site_name" content="{{ sitelocal.title}}" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="{{ page.title }}" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"{{ site.author }}"},"description":"{{ sitelocal.description }}","headline":"{{ page.title }}","name":"{{ sitelocal.title }}","url":"{{ site.url }}{{ page.url }}"}</script>
+
+<!-- Setup theme-color -->
+{% include head-custom-theme-colors.html %}
+
+<!-- Setup Google Analytics -->
+{% include head-custom-google-analytics.html %}
+
+
+<!-- You can set your favicon here -->
+<link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/assets/images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="{{ site.baseurl }}/assets/images/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}/assets/images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ site.baseurl }}/assets/images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ site.baseurl }}/assets/images/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ site.baseurl }}/assets/images/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ site.baseurl }}/assets/images/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ site.baseurl }}/assets/images/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ site.baseurl }}/assets/images/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="{{ site.baseurl }}/assets/images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/images/favicon-16x16.png">
+<link rel="manifest" href="{{ site.baseurl }}/assets/images/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="{{ site.baseurl }}/assets/images/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+{% I18n_Headers %}
