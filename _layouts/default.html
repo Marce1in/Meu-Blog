@@ -30,7 +30,7 @@
 
       <span class="langSpan">
         {%if site.active_lang == "pt-BR" %}
-          <a class="rmUnder" {% static_href %}href="/en/{{page.url}}"{% endstatic_href %}>
+          <a class="rmUnder" {% static_href %}href="/en{{page.url}}"{% endstatic_href %}>
                 🇺🇸
           </a>
         {% else %}
