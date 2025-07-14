@@ -18,14 +18,28 @@
 
     <header>
       <div class="container">
-        <a id="a-title" href="{{ '/' }}">
+        <a id="a-title" href="/">
           <h1>{{ sitelocal.title }}</h1>
         </a>
         <h2>{{ sitelocal.description }}</h2>
       </div>
     </header>
 
+
     <div class="container">
+
+      <span class="langSpan">
+        {%if site.active_lang == "pt-BR" %}
+          <a class="rmUnder" {% static_href %}href="/en/{{page.url}}"{% endstatic_href %}>
+                🇺🇸
+          </a>
+        {% else %}
+          <a class="rmUnder" {% static_href %}href="{{page.url}}"{% endstatic_href %}>
+                🇧🇷
+          </a>
+        {% endif %}
+      </span>
+
       <section id="main_content">
         {{ content }}
       </section>
