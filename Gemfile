@@ -19,6 +19,7 @@ group :jekyll_plugins do
   gem "jekyll-polyglot", '~> 1.10'
   gem "jekyll-feed", "~> 0.12"
   gem 'jekyll-date-localization', '~> 0.0.9'
+  gem 'jekyll-minifier', '~> 0.1.10'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

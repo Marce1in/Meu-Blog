@@ -19,3 +19,4 @@ plugins:
   - jekyll-feed
   - jekyll-polyglot
   - jekyll-date-localization
+  - jekyll-minifier
