@@ -14,3 +14,20 @@ layout: default
 {% unless page.tags == empty %}
   <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
 {% endunless %}
+
+<script src="https://giscus.app/client.js"
+        data-repo="Marce1in/Meu-Blog"
+        data-repo-id="R_kgDOO8Ge0w"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOO8Ge084Cs9Nz"
+        data-mapping="url"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="gruvbox_dark"
+        data-lang={{ date_lang }}
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
