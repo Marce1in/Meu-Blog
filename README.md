@@ -7,7 +7,7 @@ This repository contains the source code for my personal blog, built with Jekyll
 The blog is built using [Jekyll](https://jekyllrb.com/), a static site generator. Key technologies and plugins include:
 
 *   **Theme:** [jekyll-theme-hacker](https://github.com/pages-themes/hacker) with gruvbox colors is used for the visual style.
-*   **Localization:** The site is bilingual (Portuguese and English), managed by the [jekyll-polyglot](https://github.com/untra/jekyll-polyglot) plugin.
+*   **Localization:** The site is bilingual (Portuguese and English), managed by the [jekyll-polyglot](https://github.com/untra/polyglot) plugin.
     *   UI strings (like the site title and description) are stored in the `_data/[lang]/strings.yml` files.
     *   Blog posts are created with separate files for each language (e.g., `YYYY-MM-DD-title-pt-BR.md` and `YYYY-MM-DD-title-en.md`) in the `_posts` directory.
     *   The default language is Portuguese (`pt-BR`).
