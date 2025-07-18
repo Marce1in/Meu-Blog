@@ -21,7 +21,9 @@
         <a id="a-title" href="/">
           <h1>{{ sitelocal.title }}</h1>
         </a>
-        <h2>{{ sitelocal.description }}</h2>
+        {% unless page.layout == "post" %}
+          <h2>{{ sitelocal.description }}</h2>
+        {% endunless %}
       </div>
     </header>
 

@@ -2,15 +2,20 @@
 
 <!-- Basic Meta Tags -->
 <title>{{ page.title }} | {{ sitelocal.title }}</title>
+<meta name="google-site-verification" content="Wc38Tm1PSS0l8qOj6Ror2NgGpVViCesxVwLBp_aHljw" />
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta name="author" content="{{ site.author }}" />
 <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
 <!-- Description Meta Tags with Excerpt Logic -->
 {% if page.excerpt %}
+  <meta property="og:type" content="article" />
+  <meta name="article-published_time" property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  <meta name="publish_date" property="og:publish_date" content="{{ page.date | date_to_xmlschema }}">
   <meta name="description" content="{{ page.excerpt | strip_html | strip | normalize_whitespace }}" />
   <meta property="og:description" content="{{ page.excerpt | strip_html | strip | normalize_whitespace }}" />
 {% else %}
+  <meta property="og:type" content="website" />
   <meta name="description" content="{{ sitelocal.description }}" />
   <meta property="og:description" content="{{ sitelocal.description }}" />
 {% endif %}
@@ -20,8 +25,8 @@
 <meta property="og:locale" content="{{ site.active_lang }}" />
 <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
 <meta property="og:site_name" content="{{ sitelocal.title }}" />
-<meta property="og:type" content="website" />
 <meta property="og:image" content="{{ site.url }}/assets/jijizinho.jpeg">
+<meta property="og:image:secure_url" content="{{ site.url }}/assets/jijizinho.jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="{{ sitelocal.title }}">
@@ -41,11 +46,70 @@
 <!-- JSON-LD Structured Data with Excerpt Logic -->
 {% if page.excerpt %}
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"{{ site.author }}"},"description":"{{ page.excerpt | strip_html | strip | normalize_whitespace }}","headline":"{{ page.title }}","name":"{{ sitelocal.title }}","url":"{{ site.url }}{{ page.url }}"}
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ page.title }}",
+  "description": "{{ page.excerpt | strip_html | strip | normalize_whitespace }}",
+  "url": "{{ site.url }}{{ page.url }}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.date | date_to_xmlschema }}",
+  "inLanguage": "{{ site.active_lang }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ sitelocal.title }}",
+    "url": "{{ site.url }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/assets/images/android-icon-192x192.png",
+      "width": 192,
+      "height": 192
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ site.url }}/assets/jijizinho.jpeg",
+    "width": 1200,
+    "height": 630,
+    "caption": "{{ sitelocal.title }}"
+  }
+}
 </script>
 {% else %}
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"{{ site.author }}"},"description":"{{ sitelocal.description }}","headline":"{{ page.title }}","name":"{{ sitelocal.title }}","url":"{{ site.url }}{{ page.url }}"}
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "{{ page.title }}",
+  "description": "{{ sitelocal.description }}",
+  "url": "{{ site.url }}{{ page.url }}",
+  "inLanguage": "{{ site.active_lang }}",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "{{ sitelocal.title }}",
+    "url": "{{ site.url }}",
+    "description": "{{ sitelocal.description }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.author }}"
+    }
+  },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "{{ site.url }}/assets/jijizinho.jpeg",
+    "width": 1200,
+    "height": 630,
+    "caption": "{{ sitelocal.title }}"
+  }
+}
 </script>
 {% endif %}
 
