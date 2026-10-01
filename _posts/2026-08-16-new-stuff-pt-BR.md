@@ -3,6 +3,7 @@ title: Novidades
 slug: new-stuff
 
 layout: post
+published: false
 
 lang: pt-BR
 permalink: /posts/:slug

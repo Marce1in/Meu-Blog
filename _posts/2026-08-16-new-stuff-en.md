@@ -3,6 +3,7 @@ title: What's new
 slug: new-stuff
 
 layout: post
+published: false
 
 lang: en
 permalink: /posts/:slug
